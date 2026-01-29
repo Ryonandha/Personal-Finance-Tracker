@@ -22,10 +22,10 @@
     </div>
 
     <div class="overflow-x-auto bg-white rounded-lg shadow">
-        <div class="mb-4">
-    <select wire:model.live="filterCategory" class="rounded-md border-gray-300 shadow-sm">
+        <<div class="mb-4">
+    <select wire:model.live="filterCategory" class="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
         <option value="">Semua Kategori</option>
-        @foreach(\App\Models\Category::all() as $category)
+        @foreach($categories as $category)
             <option value="{{ $category->id }}">{{ $category->name }}</option>
         @endforeach
     </select>
