@@ -18,4 +18,5 @@ class TransactionIndex extends Component
                 ->get()
         ]);
     }
+    protected $listeners = ['transactionStored' => '$refresh'];
 }
